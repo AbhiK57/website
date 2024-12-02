@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { ReactTyped } from "react-typed";
 
-const TypingAnimation = ({ text }) => {
+const TypingAnimation = ({ text, className = "" }) => {
   const [typingComplete, setTypingComplete] = useState(false);
 
   return (
     <div
-      className="absolute top-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-6xl"
+      className={`absolute text-white text-6xl text-left ${className}`}
       style={{ fontFamily: "Helvetica" }}
     >
       {!typingComplete ? (
