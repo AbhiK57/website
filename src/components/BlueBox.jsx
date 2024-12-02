@@ -1,14 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import subwayCar from "../assets/imgs/subwaycar1.jpg"; // adjust the path/extension as needed
+import subwayCar from "../assets/imgs/subwaycar1.png"; 
 
 const BlueBox = ({ children }) => {
   return (
     <div className="w-full bg-black h-screen relative overflow-hidden">
-      {/* Render any children (like TypingAnimation components) */}
       {children}
-      
-      {/* Animated Subway Car */}
       <motion.img
         src={subwayCar}
         alt="Subway Car"
@@ -18,7 +15,7 @@ const BlueBox = ({ children }) => {
         animate={{ x: 0 }}
         transition={{
           duration: 3,
-          // This easing curve starts fast then decelerates smoothly.
+          // Deceleration easing curve
           ease: [0, 0, 0.58, 1],
         }}
       />
