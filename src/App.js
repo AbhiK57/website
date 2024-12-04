@@ -7,8 +7,8 @@ const App = () => {
   return (
     <>
       <BlueBox>
-        <TypingAnimation text="Abhinav Khanduja" className="top-4 left-4" />
-        <TypingAnimation text="Portfolio Station" className="top-20 left-4" />
+        <TypingAnimation text="Abhinav Khanduja"/>
+        
       </BlueBox>
       <ProjectsSection />
     </>

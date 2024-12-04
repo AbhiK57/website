@@ -6,20 +6,19 @@ const TypingAnimation = ({ text, className = "" }) => {
 
   return (
     <div
-      className={`absolute text-white text-6xl text-left ${className}`}
+      className={`text-white text-6xl text-left ${className}`}
       style={{ fontFamily: "Helvetica" }}
     >
       {!typingComplete ? (
         <ReactTyped
           strings={[text]}
-          typeSpeed={50}
+          typeSpeed={95}
           backSpeed={30}
           loop={false}
           showCursor={true}
           onComplete={() => setTypingComplete(true)}
         />
       ) : (
-        // Display static text after typing finishes to prevent re-animation.
         <span>{text}</span>
       )}
     </div>
