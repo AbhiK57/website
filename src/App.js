@@ -2,6 +2,7 @@ import React from "react";
 import BlueBox from "./components/BlueBox.jsx";
 import ProjectsSection from "./components/ProjectsSection.jsx";
 import TypingAnimation from "./components/TypingAnimation.jsx";
+import SubwayLines from "./components/SubwayLines.jsx";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         
       </BlueBox>
       <ProjectsSection />
+      <SubwayLines />
     </>
   );
 };

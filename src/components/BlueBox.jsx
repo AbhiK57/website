@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import subwayCar from "../assets/imgs/subwaycar1.png"; 
+import SubwayLines from "./SubwayLines";
 import "../index.css";
 
 const BlueBox = ({ children }) => {
@@ -42,7 +43,11 @@ const BlueBox = ({ children }) => {
           ease: [.5, .625, 0.75, 1],
         }}
       />
+       <div className="absolute right-0 top-0 bottom-0 flex items-center pr-4 overflow-visible scale-75">
+        <SubwayLines />
+      </div>
     </div>
+
   );
 };
 
