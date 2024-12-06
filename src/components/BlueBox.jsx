@@ -1,14 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import subwayCar from "../assets/imgs/subwaycar1.png"; 
-import SubwayLines from "./SubwayLines";
 import "../index.css";
 
-const BlueBox = ({ children }) => {
+const BlueBox = ({ children, onNavigate }) => {
   return (
     <div className="w-full bg-black h-screen relative overflow-hidden">
       <div className="absolute top-4 left-4 flex flex-col gap-4">
         {children}
+        <button
+          onClick={onNavigate}
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors duration-300 max-w-max"
+        >
+          View Projects
+        </button>
       </div>
       <motion.div
         initial={{ x: "100vw" }}
@@ -43,9 +48,6 @@ const BlueBox = ({ children }) => {
           ease: [.5, .625, 0.75, 1],
         }}
       />
-       <div className="absolute right-0 top-0 bottom-0 flex items-center pr-4 overflow-visible scale-75">
-        <SubwayLines />
-      </div>
     </div>
 
   );
