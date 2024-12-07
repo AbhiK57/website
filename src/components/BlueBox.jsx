@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../index.css";
 
+// Define variants for the circle animation
+const circleVariants = {
+  hidden: { x: "100vw" },
+  visible: {
+    x: 0,
+    transition: { duration: 1.5, ease: [0, 0, 0.58, 1] }
+  }
+};
+
 const BlueBox = ({ children, onNavigate }) => {
+  // State to control the animation variant
+  const [controls, setControls] = useState("hidden");
+
+  // Effect to trigger animation after mount
+  useEffect(() => {
+    // Set controls to 'visible' shortly after mount
+    // No delay needed usually, but can add setTimeout if required
+    setControls("visible");
+  }, []); // Empty dependency array ensures this runs only once on mount
+
   return (
     <div className="w-full bg-black h-screen relative overflow-hidden">
       <div className="absolute top-4 left-4 flex flex-col gap-4">
@@ -15,12 +34,9 @@ const BlueBox = ({ children, onNavigate }) => {
         </button>
       </div>
       <motion.div
-        initial={{ x: "100vw" }}
-        animate={{ x: 0 }}
-        transition={{
-          duration: 3,
-          ease: [0, 0, 0.58, 1],
-        }}
+        variants={circleVariants}
+        initial="hidden"      // Start hidden (redundant but clear)
+        animate={controls}      // Control animation via state
         className="absolute top-4 right-4 flex flex-col space-y-2"
       >
         <div className="flex space-x-2">
