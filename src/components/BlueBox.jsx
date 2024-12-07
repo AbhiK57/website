@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import subwayCar from "../assets/imgs/subwaycar1.png"; 
 import "../index.css";
 
 const BlueBox = ({ children, onNavigate }) => {
@@ -36,6 +35,8 @@ const BlueBox = ({ children, onNavigate }) => {
         </div>
       </motion.div>
 
+      {/* Remove the subway car animation from here */}
+      {/* 
       <motion.img
         src={subwayCar}
         alt="Subway Car"
@@ -48,6 +49,7 @@ const BlueBox = ({ children, onNavigate }) => {
           ease: [.5, .625, 0.75, 1],
         }}
       />
+      */}
     </div>
 
   );
