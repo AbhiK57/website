@@ -4,7 +4,6 @@ import Menu from "./components/Menu.jsx"
 function App() {
   return (
     <div>
-      <Menu />
       <Hero />
     </div>
   );
