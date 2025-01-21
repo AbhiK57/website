@@ -1,5 +1,7 @@
 import React from "react";
 import SpotifyEmbed from './spotifyembed';
+import { motion } from "framer-motion";
+import Box1 from "./box1";
 
 const Hero = () => {
     return (
@@ -17,6 +19,7 @@ const Hero = () => {
                         One day, or day one?
                     </p>
                 </div>
+                <Box1 />
             </div>
             <div className="absolute top-0 right-0 m-4 w-[30vw] max-w-[400px] min-w-[150px] md:w-[30vw] sm:w-[40vw]">
                 <SpotifyEmbed />
