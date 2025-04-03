@@ -6,8 +6,8 @@ const TypingAnimation = ({ text }) => {
 
   return (
     <div
-      className="absolute top-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-4xl"
-      style={{ fontFamily: "Amaranth" }}
+      className="absolute top-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-6xl"
+      style={{ fontFamily: "Helvetica" }}
     >
       {!typingComplete ? (
         <ReactTyped
