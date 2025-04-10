@@ -1,12 +1,15 @@
-import Hero from "./components/Hero.jsx"
-import Menu from "./components/Menu.jsx"
+import React from "react";
+import BlueBox from "./components/BlueBox.jsx";
+import Hero from "./components/Hero.jsx";
+import ProjectsSection from "./components/ProjectsSection.jsx";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Hero />
-    </div>
+    <>
+      <BlueBox />
+      <ProjectsSection />
+    </>
   );
-}
+};
 
 export default App;
